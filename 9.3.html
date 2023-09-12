@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9.3</title>
+    <style>
+        .left{
+            float: left;
+            margin-left: 300px;
+        }
+        .left #center-text{
+            display: none;
+        }
+        .right{
+            float: right;
+            margin-right: 300px;
+        }
+        @media(max-width: 768px){
+            .left{
+            float: center;
+        }
+        .left #left-text{
+            display: none;
+        }
+        .left #center-text{
+            display: block;
+        }
+        .right{
+            display: none;
+        }   
+        }
+    </style>
+</head>
+<body>
+    <div class="left">
+        <h1 id="left-text">left</h1>
+        <h1 id="center-text">center</h1>
+    </div>
+    <div class="right">
+        <h1>right</h1>
+    </div>
+</body>
+</html>

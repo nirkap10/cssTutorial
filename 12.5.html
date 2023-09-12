@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12.5</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        div{
+            position: relative;
+        }
+        .tooltip:before{
+        content: 'hello hello hello';
+        background: yellow;
+        position: absolute;
+        top: 65px;
+        left: 560px;
+        width:120px;
+        height: 20px;
+        border-radius: 3px;
+        display: none;
+        } 
+        .tooltip:hover::before{
+            display: block;
+    }   
+        
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Lorem, ipsum dolor.</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum illo iste ratione optio <a href="#" class="tooltip">hello</a>, odio voluptatem nihil eligendi fugit deserunt nemo modi. Dicta quis illum atque consequuntur reprehenderit beatae autem, rem, non nihil recusandae facilis aspernatur porro. Eaque earum placeat qui quasi animi reiciendis in. Quam, velit quibusdam aliquam doloremque est autem provident odio labore voluptates laudantium sequi earum fuga praesentium. Tempore labore beatae ex odit enim sunt alias molestias numquam dolores facere saepe culpa, exercitationem reiciendis esse non voluptate harum optio minus atque vero porro? Sunt ut dolorum officiis nam perspiciatis voluptas eum, aliquam aperiam neque nisi commodi voluptates! Dolorum?
+        </p>
+    
+    </div>
+</body>
+</html>

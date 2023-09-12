@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12.2</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;            
+        }
+        .container{
+            position: relative;
+            background: green;
+            height: 50vh;
+            width: 50vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container:before{
+        content: '';
+        background: black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width:50%;
+        height: 100%;
+        }    
+            
+
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+</body>
+</html>
