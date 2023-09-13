@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14.2</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            text-align:center
+        }
+        .box{
+            border: 2px solid black;
+            /* margin: 10px 20px;
+            padding: 10px 20px; */
+            height: 50px;
+            width: 200px;
+        }
+    
+        #box-Y
+        {
+            position: relative;
+            overflow: visible;
+        }
+
+
+    #box-Y:before{
+    content: '';
+    background: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 0%;
+    transition: all 1s ease-in-out;
+    }
+    #box-Y:hover::before{
+        content: '';
+        height: 100%;
+    }    
+    #box-X{
+            position: relative;
+            overflow: visible;
+    }
+    
+    #box-X:before{
+    content: '';
+    background: blue;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:0%;
+    height: 100%;
+    transition: all 1s ease-in-out;
+    }
+    #box-X:hover::before{
+        content: '';
+        width: 100%;
+        
+
+    }
+
+    #box-Y:hover::before{
+        content: '';
+        height: 100%;
+    }    
+    #box-R{
+            position: relative;
+            overflow: hidden;
+    }
+    
+    #box-R:before{
+    display: hidden;
+    content: '';
+    position: absolute;
+    top: -75px;
+    left: 75px;
+    /* width:50px;
+    height: 200px; */
+    transition: all 1s ease-in-out;
+    }
+    #box-R:hover::before{
+        content: '';
+        background: blue;
+        width:50px;
+        height: 200px;
+        transform: rotate(-90deg);
+        
+
+    }
+    #box-S{
+            position: relative;
+            transition: all 1s ease-in-out;
+            /* overflow: hidden; */
+    }
+    .box-scale{
+    opacity: 0;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:200px;
+    height: 50px;
+    transition: all 1s ease-in-out;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 3rem;
+    }
+    .box-scale:hover{
+        opacity: 1;
+        background: black;
+        color: white;
+        font-size: 20px;
+        
+    }
+
+    /* #box-S:before{
+    display: hidden;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:400px;
+    height: 100px;
+    transition: all 1s ease-in-out;
+    }
+    #box-S:hover::before{
+        content: '';
+        background: black;
+        color: white;
+        
+    } */
+
+    #box-Sk{
+            position: relative;
+            transition: all 1s ease-in-out;
+            /* overflow: hidden; */
+    }
+    #box-SK:hover{
+        transform: skew(-15deg, -15deg);
+    }
+    .box-skew{
+        display: hidden;
+    opacity: 0;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:20px;
+    height: 10px;
+    transition: all 1s ease-in-out;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 1rem;
+    }
+    .box-skew:hover{
+        opacity: 1;
+        transform: rotate(720deg);
+        background: pink;
+        color: white;
+        width:200px;
+        height: 50px;
+        font-size: 20px;
+        
+    }
+    </style>
+</head>
+<body>
+    <div class="box" id="box-Y"><h1>Y</h1></div>
+    <div class="box" id="box-X"><h1>X</h1></div>
+    <div class="box" id="box-R"><h1>R</h1></div>
+    <div class="box" id="box-S"><div class="box-scale">scale</div><h1>S</h1></div>
+    <div class="box" id="box-SK"><div class="box-skew">Skew</div><h1>SK</h1></div>
+</body>
+</html>
